@@ -1,0 +1,33 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?ceea0eaad5e9bd7fcd9003a0f16f3bb6") format("truetype"),
+url("./flaticon.woff?ceea0eaad5e9bd7fcd9003a0f16f3bb6") format("woff"),
+url("./flaticon.woff2?ceea0eaad5e9bd7fcd9003a0f16f3bb6") format("woff2"),
+url("./flaticon.eot?ceea0eaad5e9bd7fcd9003a0f16f3bb6#iefix") format("embedded-opentype"),
+url("./flaticon.svg?ceea0eaad5e9bd7fcd9003a0f16f3bb6#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "android-logo": "\f101",
+    "apple": "\f102",
+);
+
+.flaticon-android-logo:before {
+    content: map-get($flaticon-map, "android-logo");
+}
+.flaticon-apple:before {
+    content: map-get($flaticon-map, "apple");
+}
